@@ -1,0 +1,35 @@
+<table
+  *ngIf="dataService.dataSource.length; else noBlock"
+  mat-table
+  [dataSource]="dataService.dataSource"
+  class="mat-elevation-z8"
+>
+
+  <ng-container matColumnDef="gender">
+    <th mat-header-cell *matHeaderCellDef> Пол </th>
+    <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="age">
+    <th mat-header-cell *matHeaderCellDef> Возраст </th>
+    <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> Должность </th>
+    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="experience">
+    <th mat-header-cell *matHeaderCellDef> Стаж </th>
+    <td mat-cell *matCellDef="let element"> {{element.experience}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<ng-template #noBlock>
+  <p class="no-info">Нет данных</p>
+</ng-template>
+

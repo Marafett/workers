@@ -1,0 +1,27 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Пол</mat-label>
+      <input matInput formControlName="gender">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Возраст</mat-label>
+      <input matInput formControlName="age">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Должность</mat-label>
+      <input matInput formControlName="position">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Стаж</mat-label>
+      <input matInput formControlName="experience">
+    </mat-form-field>
+
+    <button mat-raised-button type="submit" color="primary">Добавить</button>
+  </form>
+</div>
+

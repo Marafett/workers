@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+.container .mat-form-field {
+  width: 220px;
+}
+.container form {
+  margin-bottom: 20px;
+}
+.container form > * {
+  margin: 5px 0;
+}
+.container form button {
+  margin-left: 8px;
+}
